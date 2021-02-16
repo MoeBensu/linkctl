@@ -1,11 +1,11 @@
 //imports
 const express = require('express');
 const router = express.Router();
+const urlModel = require('../models/url');
 
 const config = require('config');
 const validUrl = require('valid-url');
 const shortId = require('shortid');
-const urlModel = require('../models/url');
 const baseUrl = config.get('baseUrl');
 
 /**
@@ -24,14 +24,15 @@ router.post('/shorten', async (req, res) => {
             let dbUrl = await urlModel.findOne({longUrl});
 
             if (dbUrl) {
-                res.json(dbUrl);
+                return res.json(dbUrl);
             } else {
-                const newShortUrl = `${baseUrl}/${shortId.generate()}`;
-                res.json( await saveUrlToDB(longUrl, newShortUrl));
+                const urlCode = shortId.generate();
+                const newShortUrl = baseUrl + urlCode;
+                return res.json( await saveUrlToDB(longUrl, newShortUrl, urlCode));
             }
 
         } catch (error) {
-            res.status(500).json('Server internal error');
+            return res.status(500).json('Server internal error');
         }
 
     } else {
@@ -39,10 +40,11 @@ router.post('/shorten', async (req, res) => {
     }
 });
 
-async function saveUrlToDB(longUrl, shortUrl) {
+async function saveUrlToDB(longUrl, shortUrl, urlCode) {
     const newUrl = new urlModel({
         longUrl,
         shortUrl,
+        urlCode,
     });
     await newUrl.save();
 
