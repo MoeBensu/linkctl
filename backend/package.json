@@ -1,0 +1,35 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "mern stack url shortener",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoetheNeuron/url_shortener.git"
+  },
+  "author": "Moe Bin Sumait",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoetheNeuron/url_shortener/issues"
+  },
+  "homepage": "https://github.com/MoetheNeuron/url_shortener#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.16",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "nodemon": "^2.0.7"
+  }
+}
