@@ -1,6 +1,4 @@
 //imports
-const express = require('express');
-const router = express.Router();
 const urlModel = require('../models/url');
 
 const config = require('config');
@@ -10,11 +8,10 @@ const baseUrl = config.get('baseUrl');
 
 /**
  * 
- * @route           POST /api/shorten
- * @description     Generate a short url and add it into db
+ * @description      Generate short url
  * 
  */
-router.post('/shorten', async (req, res) => {
+const shortenUrl =  async (req, res) => {
     const { longUrl } = req.body;
 
     if (validUrl.isUri(longUrl)) {
@@ -26,9 +23,9 @@ router.post('/shorten', async (req, res) => {
             if (dbUrl) {
                 return res.json(dbUrl);
             } else {
-                const urlCode = shortId.generate();
-                const newShortUrl = baseUrl + urlCode;
-                return res.json( await saveUrlToDB(longUrl, newShortUrl, urlCode));
+                const redirectCode = shortId.generate();
+                const newShortUrl = baseUrl + redirectCode
+                return res.json( await saveUrlToDB(longUrl, newShortUrl, redirectCode));
             }
 
         } catch (error) {
@@ -38,13 +35,13 @@ router.post('/shorten', async (req, res) => {
     } else {
         res.status(401).json(`Invalid passed url ${ longUrl }`);
     }
-});
+}
 
-async function saveUrlToDB(longUrl, shortUrl, urlCode) {
+async function saveUrlToDB(longUrl, shortUrl, redirectCode) {
     const newUrl = new urlModel({
         longUrl,
         shortUrl,
-        urlCode,
+        redirectCode
     });
     await newUrl.save();
 
@@ -52,4 +49,4 @@ async function saveUrlToDB(longUrl, shortUrl, urlCode) {
 }
 
 //export
-module.exports = router;
+module.exports = shortenUrl;

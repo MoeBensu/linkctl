@@ -11,8 +11,8 @@ const port = process.env.port ||  8000;
 app.use(express.json());
 
 
-app.use('/api', require('./routes/shortenUrl'));
-app.use('/', require('./routes/redirect'));
+app.use('/', require('./routes/routes'));
+app.use('/api', require('./routes/routes'));
 
 app.listen(port, () => {
     console.log(`server alive on port ${port}!`);

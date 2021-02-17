@@ -1,17 +1,15 @@
 //imports
-const express = require('express');
-const router = express.Router();
 const urlModel = require('../models/url');
 
 /**
- * @rout            GET api/:urlCode
- * @description     redirect short url to original url
+ * 
+ * @description     handle redirect request
  * 
  */
-router.get('/:urlCode', async (req, res) => {
+const redirect = async (req, res) => {
 
     try {
-        const url = await urlModel.findOne( { urlCode: req.params.urlCode } );
+        const url = await urlModel.findOne( { redirectCode: req.params.redirectCode } );
 
         if (url) {
             url.clicks++;
@@ -24,7 +22,7 @@ router.get('/:urlCode', async (req, res) => {
         return res.status(500).json('Server internal error');
     }
 
-});
+}
 
 //export
-module.exports = router;
+module.exports = redirect;
