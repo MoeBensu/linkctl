@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MoetheNeuron/url_shortener/issues"
   },
-  "homepage": "https://github.com/MoetheNeuron/url_shortener#readme"
+  "homepage": "https://github.com/MoetheNeuron/url_shortener#readme",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
 }
