@@ -1,8 +1,20 @@
 import React, { useState, useRef } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 function InputUrl() {
   const [longUrl, setLongUrl] = useState('');
+
+  async function shortenUrl() {
+    const data = {
+      longUrl,
+    };
+
+    await axios.post('http://localhost:8000/api/shorten', data).then((res) => {
+      console.log(res);
+      console.log(res.data);
+    });
+  }
 
   const formControlRef = useRef();
 
@@ -13,6 +25,7 @@ function InputUrl() {
   function submit(event) {
     event.preventDefault();
     if (formControlRef.current && formControlRef.current.checkValidity()) {
+      shortenUrl();
       setLongUrl('');
     } else {
       formControlRef.current.focus();
