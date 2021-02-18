@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "url_shortener",
   "version": "1.0.0",
-  "description": "backend/server",
+  "description": "mern stack url shortener",
   "main": "server.js",
   "scripts": {
     "start": "npm server",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/MoetheNeuron/url_shortener.git"
   },
   "author": "Moe Bin Sumait",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MoetheNeuron/url_shortener/issues"
   },
