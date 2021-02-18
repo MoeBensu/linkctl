@@ -1,10 +1,10 @@
 //imports
-const urlModel = require("../models/url");
+const urlModel = require('../models/url');
 
-const config = require("config");
-const validUrl = require("valid-url");
-const shortId = require("shortid");
-const baseUrl = config.get("baseUrl");
+const config = require('config');
+const validUrl = require('valid-url');
+const shortId = require('shortid');
+const baseUrl = config.get('baseUrl');
 
 /**
  *
@@ -26,7 +26,7 @@ const shortenUrl = async (req, res) => {
         return res.json(await saveUrlToDB(longUrl, newShortUrl, redirectCode));
       }
     } catch (error) {
-      return res.status(500).json("Server internal error");
+      return res.status(500).json('Server internal error');
     }
   } else {
     res.status(401).json(`Invalid passed url ${longUrl}`);
