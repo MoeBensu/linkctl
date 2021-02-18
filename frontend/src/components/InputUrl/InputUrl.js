@@ -2,6 +2,9 @@ import React, { useState, useRef } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import axios from 'axios';
 
+//development
+require('dotenv').config();
+
 function InputUrl() {
   const [longUrl, setLongUrl] = useState('');
 
@@ -9,8 +12,7 @@ function InputUrl() {
     const data = {
       longUrl,
     };
-
-    await axios.post('http://localhost:8000/api/shorten', data).then((res) => {
+    await axios.post(process.env.REACT_APP_HOSTURI_POST, data).then((res) => {
       console.log(res);
       console.log(res.data);
     });
