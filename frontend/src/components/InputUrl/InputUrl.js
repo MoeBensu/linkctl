@@ -1,21 +1,22 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
-import { InputGroup, FormControl, Button, Container } from 'react-bootstrap';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
 //development
 require('dotenv').config();
 
-function InputUrl() {
+function InputUrl({ retriedData, onDataRetrieval }) {
   const [longUrl, setLongUrl] = useState('');
 
   async function shortenUrl() {
-    const data = {
+    const payLoad = {
       longUrl,
     };
-    await axios.post(process.env.REACT_APP_HOSTURI_POST, data).then((res) => {
-      console.log(res);
-      console.log(res.data);
-    });
+    await axios
+      .post(process.env.REACT_APP_HOSTURI_POST, payLoad)
+      .then((res) => {
+        onDataRetrieval(retriedData.concat(res.data));
+      });
   }
 
   const formControlRef = useRef();
@@ -40,12 +41,12 @@ function InputUrl() {
     }
   }
 
-  const containerStyle = {
-    top: '50px',
+  const divStyle = {
+    top: '150px',
   };
   return (
-    <Container className="my-auto">
-      <InputGroup className="mb-3" style={containerStyle}>
+    <div style={divStyle}>
+      <InputGroup className="mb-3">
         <FormControl
           size="lg"
           placeholder="i.e. https://example.com/"
@@ -66,7 +67,7 @@ function InputUrl() {
           Please provide URL to shorten!
         </FormControl.Feedback>
       </InputGroup>
-    </Container>
+    </div>
   );
 }
 
