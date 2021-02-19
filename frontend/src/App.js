@@ -1,13 +1,16 @@
-import { Container } from 'react-bootstrap'
-import InputUrl from './components/InputUrl/InputUrl'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import InputUrl from './components/InputUrl/InputUrl';
+import Header from './components/Header/Header';
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Container>
+    <>
+      <Header></Header>
+
       <InputUrl></InputUrl>
-    </Container>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;

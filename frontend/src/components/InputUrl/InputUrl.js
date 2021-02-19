@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import axios from 'axios';
+import { InputGroup, FormControl, Button, Container } from 'react-bootstrap';
 
 //development
 require('dotenv').config();
@@ -40,9 +40,12 @@ function InputUrl() {
     }
   }
 
+  const containerStyle = {
+    top: '50px',
+  };
   return (
-    <div>
-      <InputGroup className="mb-3">
+    <Container className="my-auto">
+      <InputGroup className="mb-3" style={containerStyle}>
         <FormControl
           size="lg"
           placeholder="i.e. https://example.com/"
@@ -63,7 +66,7 @@ function InputUrl() {
           Please provide URL to shorten!
         </FormControl.Feedback>
       </InputGroup>
-    </div>
+    </Container>
   );
 }
 
