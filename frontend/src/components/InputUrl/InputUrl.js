@@ -9,13 +9,13 @@ function InputUrl({ retriedData, onDataRetrieval }) {
   const [longUrl, setLongUrl] = useState('');
 
   async function shortenUrl() {
-    const payLoad = {
-      longUrl,
-    };
+    const { status, data } = await createShortUrl({ longUrl });
 
-    await createShortUrl(payLoad).then((res) => {
-      onDataRetrieval(retriedData.concat(res.data));
-    });
+    if (status === 200) {
+      onDataRetrieval(retriedData.concat(data));
+    }
+
+    //TODO display feedback
   }
 
   const formControlRef = useRef();

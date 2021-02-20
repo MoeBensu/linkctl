@@ -7,6 +7,7 @@ function Redirect() {
 
   async function urlRedirectTo() {
     const redirectTo = await fetchLongUrl(redirectCode);
+    console.log(redirectTo);
     window.location = redirectTo;
   }
 
