@@ -15,8 +15,11 @@ function Redirect() {
   useEffect(() => setTimeout(() => urlRedirectTo(), 1000));
 
   return (
-    <div id="wrapper" style={{ width: '5%', margin: 'auto' }}>
-      <div>
+    <div id="wrapper" style={{ paddingTop: '60px' }}>
+      <div style={{ width: '50%', margin: 'auto' }}>
+        <h2 style={{ textAlign: 'center' }}>Redirecting...</h2>
+      </div>
+      <div style={{ width: '5%', margin: 'auto' }}>
         <ReactLoading type="bars" color="#000"></ReactLoading>
       </div>
     </div>

@@ -25,7 +25,7 @@ function ErrorPage() {
   return (
     <div
       id="wrapper"
-      style={{ width: '50%', margin: '0 auto', padding: '20px auto' }}>
+      style={{ width: '50%', margin: '0 auto', paddingTop: '100px' }}>
       <div id="info" style={{ textAlign: 'center' }}>
         {createErrorMessage()}
         <br></br>
