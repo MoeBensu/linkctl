@@ -1,4 +1,6 @@
 import Header from '../../components/Header/Header';
+import PageFooter from '../../components/Footer/Footer';
+
 import InputUrl from '../../components/InputUrl/InputUrl';
 import UrlsList from '../../components/UrlsList/UrlsList';
 import { useState } from 'react';
@@ -11,15 +13,17 @@ function Home() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <Container>
         <InputUrl
           retriedData={retriedData}
           onDataRetrieval={onDataRetrieval}></InputUrl>
+
         {retriedData.length ? (
           <UrlsList retriedData={retriedData}></UrlsList>
         ) : null}
       </Container>
+      <PageFooter />
     </>
   );
 }

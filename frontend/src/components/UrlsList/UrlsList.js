@@ -3,9 +3,6 @@ import { Table } from 'react-bootstrap';
 import UrlRow from './UrlRow/UrlRow';
 
 function UrlsList({ retriedData }) {
-  const divStyle = {
-    top: '200px',
-  };
   return (
     <Table responsive="sm md" striped bordered hover>
       <thead>

@@ -2,19 +2,11 @@ import React from 'react';
 import { Navbar, Row, Col, Jumbotron, Container } from 'react-bootstrap';
 
 function Header() {
-  const navBarStyle = {
-    height: '80px',
-  };
-
   return (
     <>
-      <Row>
-        <Col lg="12">
-          <Navbar bg="dark" variant="dark" expand="lg" style={navBarStyle}>
-            <Navbar.Brand href="home"> @Elchapo/URL</Navbar.Brand>
-          </Navbar>
-        </Col>
-      </Row>
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar.Brand href="home"> @Elchapo/URL</Navbar.Brand>
+      </Navbar>
 
       <Jumbotron fluid>
         <Container>
