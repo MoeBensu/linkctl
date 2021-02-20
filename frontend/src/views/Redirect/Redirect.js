@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchLongUrl } from './../../api';
+import ReactLoading from 'react-loading';
 
 function Redirect() {
   const { redirectCode } = useParams();
@@ -14,8 +15,10 @@ function Redirect() {
   useEffect(() => setTimeout(() => urlRedirectTo(), 1000));
 
   return (
-    <div>
-      <h1>Loading...</h1>
+    <div id="wrapper" style={{ width: '5%', margin: 'auto' }}>
+      <div>
+        <ReactLoading type="bars" color="#000"></ReactLoading>
+      </div>
     </div>
   );
 }
