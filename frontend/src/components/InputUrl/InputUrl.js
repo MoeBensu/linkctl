@@ -12,6 +12,7 @@ function InputUrl({ retriedData, onDataRetrieval }) {
     const payLoad = {
       longUrl,
     };
+
     await createShortUrl(payLoad).then((res) => {
       onDataRetrieval(retriedData.concat(res.data));
     });

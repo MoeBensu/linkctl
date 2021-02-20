@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { toServerHostename } from '../../utlis';
+import { fetchLongUrl } from './../../api';
 
 function Redirect() {
   const { redirectCode } = useParams();
 
-  function redirectToServer() {
-    window.location = toServerHostename(redirectCode);
+  async function urlRedirectTo() {
+    const redirectTo = await fetchLongUrl(redirectCode);
+    window.location = redirectTo;
   }
-  useEffect(() => setTimeout(() => redirectToServer(), 1000));
+
+  useEffect(() => setTimeout(() => urlRedirectTo(), 1000));
 
   return (
     <div>

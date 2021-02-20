@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../views/Home/Home';
 import Redirect from '../views/Redirect/Redirect';
+import ErrorPage from '../views/ErrorPage/ErrorPage';
 
-function Routes() {
+function Layout() {
   return (
     <div>
       <BrowserRouter>
@@ -12,7 +13,7 @@ function Routes() {
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/home" component={Home}></Route>
             <Route exact path="/:redirectCode/" component={Redirect}></Route>
-            <Route render={() => <h1>Not found!</h1>} />
+            <Route component={ErrorPage} />
           </Switch>
         </div>
       </BrowserRouter>
@@ -20,4 +21,4 @@ function Routes() {
   );
 }
 
-export default Routes;
+export default Layout;

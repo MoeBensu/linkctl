@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './views/Home/Home';
 import reportWebVitals from './reportWebVitals';
-import Routes from './routes';
+import Layout from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes>
+    <Layout>
       <Home />
-    </Routes>
+    </Layout>
   </React.StrictMode>,
   document.getElementById('root')
 );
