@@ -1,5 +1,5 @@
 //imports
-const urlModel = require("../models/url");
+const urlModel = require('../models/url');
 
 /**
  *
@@ -15,14 +15,14 @@ const redirect = async (req, res) => {
     if (url) {
       url.clicks++;
       await url.save();
-      return res.redirect(url.longUrl);
+      return res.json({ longUrl: url.longUrl });
     } else {
       return res
         .status(401)
         .json(`Invalid url with id ${req.params.urlCode} to redirect`);
     }
   } catch (error) {
-    return res.status(500).json("Server internal error");
+    return res.status(500).json('Server internal error');
   }
 };
 
