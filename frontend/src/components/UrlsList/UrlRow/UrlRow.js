@@ -11,7 +11,7 @@ function UrlsList({ longUrl, redirectCode, clicks }) {
 
   function handleCopyEvent(event) {
     setCopied(true);
-    setTimeout(() => setCopied(false), 1000);
+    setTimeout(() => setCopied(false), 2000);
   }
 
   return (
@@ -32,16 +32,16 @@ function UrlsList({ longUrl, redirectCode, clicks }) {
         <>
           <CopyToClipboard text={mappedUrl} onCopy={handleCopyEvent}>
             <Button ref={buttonRef} variant="outline-success">
-              Copy!
+              {copied ? 'Copied!' : 'Copy!'}
             </Button>
           </CopyToClipboard>
-          <Overlay target={buttonRef.current} show={copied} placement="right">
+          {/* <Overlay target={buttonRef.current} show={copied} placement="right">
             {(props) => (
               <Tooltip id="copy-tooltip" {...props}>
                 Copied!
               </Tooltip>
             )}
-          </Overlay>
+          </Overlay> */}
         </>
       </td>
     </tr>
