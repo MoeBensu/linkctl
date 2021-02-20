@@ -1,12 +1,12 @@
-import Header from './components/Header/Header';
-import InputUrl from './components/InputUrl/InputUrl';
-import UrlsList from './components/UrlsList/UrlsList';
+import Header from '../../components/Header/Header';
+import InputUrl from '../../components/InputUrl/InputUrl';
+import UrlsList from '../../components/UrlsList/UrlsList';
 import { useState } from 'react';
 
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function Home() {
   const [retriedData, onDataRetrieval] = useState([]);
 
   return (
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

@@ -11,7 +11,7 @@ function Header() {
       <Row>
         <Col lg="12">
           <Navbar bg="dark" variant="dark" expand="lg" style={navBarStyle}>
-            <Navbar.Brand href="#home"> @Elchapo/URL</Navbar.Brand>
+            <Navbar.Brand href="home"> @Elchapo/URL</Navbar.Brand>
           </Navbar>
         </Col>
       </Row>

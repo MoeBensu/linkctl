@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toServerHostename, toClientHostname } from './../utlis';
 
 /**
  *
@@ -7,8 +8,10 @@ import axios from 'axios';
  * @description         GET hostname/
  *                      fetch longUrl to get redirected by server to the original url
  */
-export const fetchLongUrl = (redirectCode) =>
-  axios.get(process.env.REACT_APP_HOSTURI + '/' + redirectCode);
+export async function fetchLongUrl(redirectCode) {
+  console.log(toServerHostename(redirectCode));
+  await axios.get(toServerHostename(redirectCode));
+}
 
 /**
  *

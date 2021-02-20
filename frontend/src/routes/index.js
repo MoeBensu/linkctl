@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router';
-import { createShortUrl } from './../api';
-import { toServerHostename } from './../utlis';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from '../views/Home/Home';
+import Redirect from '../views/Redirect/Redirect';
 
-function Routers({ redirectCode }) {
-  const [redirected, setRedirected] = useState(false);
-
-  useEffect(() => createShortUrl(redirectCode).then(setRedirected(true)), [
-    redirectCode,
-    redirected,
-  ]);
-
+function Routes() {
   return (
-    <>
-      {redirected ? (
-        <Redirect to={toServerHostename(redirectCode)}></Redirect>
-      ) : null}
-    </>
+    <div>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/home" component={Home}></Route>
+            <Route exact path="/:redirectCode/" component={Redirect}></Route>
+            <Route render={() => <h1>Not found!</h1>} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
-export default Routers;
+export default Routes;

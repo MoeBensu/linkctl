@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import axios from 'axios';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { createShortUrl } from './../../api';
 
 //development
 require('dotenv').config();
@@ -12,11 +12,9 @@ function InputUrl({ retriedData, onDataRetrieval }) {
     const payLoad = {
       longUrl,
     };
-    await axios
-      .post(process.env.REACT_APP_HOSTURI_POST, payLoad)
-      .then((res) => {
-        onDataRetrieval(retriedData.concat(res.data));
-      });
+    await createShortUrl(payLoad).then((res) => {
+      onDataRetrieval(retriedData.concat(res.data));
+    });
   }
 
   const formControlRef = useRef();
