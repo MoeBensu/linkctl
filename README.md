@@ -1,4 +1,4 @@
-# URL Shortner
+# URL Shortener
 
 ## A Brief Overview
 Just another url shortner service, using MERN stack.
