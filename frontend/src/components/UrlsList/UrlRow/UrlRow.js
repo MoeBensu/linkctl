@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Button, Overlay, Tooltip } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { toClientHostname } from '../../../utlis';
 
 function UrlsList({ longUrl, redirectCode, clicks }) {
@@ -35,13 +35,6 @@ function UrlsList({ longUrl, redirectCode, clicks }) {
               {copied ? 'Copied!' : 'Copy!'}
             </Button>
           </CopyToClipboard>
-          {/* <Overlay target={buttonRef.current} show={copied} placement="right">
-            {(props) => (
-              <Tooltip id="copy-tooltip" {...props}>
-                Copied!
-              </Tooltip>
-            )}
-          </Overlay> */}
         </>
       </td>
     </tr>

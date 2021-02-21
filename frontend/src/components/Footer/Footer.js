@@ -7,7 +7,6 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function PageFooter() {
