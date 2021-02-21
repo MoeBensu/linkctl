@@ -1,7 +1,7 @@
 # URL Shortener
 
 ## A Brief Overview
-Just another url shortener service, using MERN stack.
+Just another [url shortener](https://en.wikipedia.org/wiki/URL_shortening) service, using MERN stack.
 
 A minimal service in terms of styling, yet relies on clean and scalable code.
 
