@@ -11,8 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/MoetheNeuron/url_shortener.git"
   },
-  "author": "Moe Bin Sumait",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MoetheNeuron/url_shortener/issues"
   },
