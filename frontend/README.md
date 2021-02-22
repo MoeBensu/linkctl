@@ -16,18 +16,9 @@ For example:
 `REACT_APP_HOSTURI_POST = 'http://localhost:8080/api/post' 
 `
 
-- install dependencies and run the backend app (you can eitehr run it with node or by using script with)
-
+- install dependencies and run the frontend app 
 ```
 npm i
-```
-
-Nodemon:
-```
-npm run dev
-```
-
-Or:
-```
 npm run start
 ```
+
