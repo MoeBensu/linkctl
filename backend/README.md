@@ -13,7 +13,6 @@
 
 ```
 npm i
-npm run start
 ```
 
 Nodemon:
