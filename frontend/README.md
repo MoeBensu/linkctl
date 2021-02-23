@@ -13,7 +13,7 @@ REACT_APP_CLIENT_HOSTNAME = <localhost:port>
 
 For example:
 
-`REACT_APP_HOSTURI_POST = 'http://localhost:8080/api/post' 
+`REACT_APP_HOSTURI_POST = 'http://localhost:8080/api/shorten' 
 `
 
 - install dependencies and run the frontend app 
