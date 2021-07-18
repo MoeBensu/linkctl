@@ -5,15 +5,15 @@ Just another [url shortener](https://en.wikipedia.org/wiki/URL_shortening) servi
 
 A minimal service in terms of styling, yet relies on clean and scalable code.
 
-## Used Technologies
-- [MongoDB](https://www.mongodb.com/) - database
-- [Express.js](https://expressjs.com/) - Node.js web framework
-- [React.js](https://reactjs.org/) - a client-side JavaScript library/framework
-- [Node.js](https://nodejs.org/en/) - JavaScript application backend server
-- [Nginx](https://www.nginx.com/) - web server (will be added to repo when deployed)
-- [Bootstrap](https://getbootstrap.com/)/[react-bootstrap](https://react-bootstrap.github.io/) - CSS Framework(s)
+## Overview
+
+| Codebase | Description  | Built with |
+|---|---|---|
+| wine | url shortener service | [node.js](https://nodejs.org/en/)/[express.js](https://expressjs.com/)s server  |
+| rine | frontend app | [react.js](https://reactjs.org/) webapp with [bootstrap](https://getbootstrap.com/) | 
+|  mj | database | [MongoDB](https://www.mongodb.com/) docker image|
 
 ## Upcoming plans
-There're certainly some enhancements still to be done, i.e. moving url validation to client-side, and deployment will also follow on as soon as I have more time. I would probably go with a dedicated server and containerize the app or maybe try out AWS.
-
-Feedback is more than welcome. Tx in advance ;)
+- Dockerization of back- and frontend
+- Replace MongoDB Atlas with a docker mongodb imgage 
+- hosting
