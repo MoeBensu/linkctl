@@ -1,7 +1,7 @@
 {
   "name": "url_shortener",
   "version": "1.0.0",
-  "description": "full stack url shortener",
+  "description": "mern url shortener",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

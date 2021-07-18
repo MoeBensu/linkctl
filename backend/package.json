@@ -1,5 +1,5 @@
 {
-  "name": "url_shortener",
+  "name": "wine",
   "version": "1.0.0",
   "description": "mern stack url shortener",
   "main": "server.js",
