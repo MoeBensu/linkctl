@@ -1,5 +1,5 @@
 # URL Shortener
- ![image](https://img.shields.io/github/last-commit/moetheneuron/url_shortener) ![image](https://img.shields.io/github/issues/MoetheNeuron/url_shortener) ![image](https://img.shields.io/github/license/MoetheNeuron/url_shortener)  
+ [![CodeQL](https://github.com/MoetheNeuron/url_shortener/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/MoetheNeuron/url_shortener/actions/workflows/codeql-analysis.yml) ![image](https://img.shields.io/github/last-commit/moetheneuron/url_shortener) ![image](https://img.shields.io/github/issues/MoetheNeuron/url_shortener) ![image](https://img.shields.io/github/license/MoetheNeuron/url_shortener)  
 
 ## A Brief Description
 Just another [url shortener](https://en.wikipedia.org/wiki/URL_shortening) service, using MERN stack.
