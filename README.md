@@ -7,7 +7,7 @@ A minimal service in terms of styling, yet relies on clean and scalable code.
 
 ## Overview
 
-| Codebase | Description  | Built with |
+| Codebase/Service | Description  | Built with |
 |---|---|---|
 | [wine](https://github.com/MoetheNeuron/url_shortener/tree/main/wine) | url shortener service | [node.js](https://nodejs.org/en/)/[express.js](https://expressjs.com/) server  |
 | [rine](https://github.com/MoetheNeuron/url_shortener/tree/main/rine) | frontend webapp | [react.js](https://reactjs.org/) app with [bootstrap](https://getbootstrap.com/) | 
