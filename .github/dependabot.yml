@@ -36,9 +36,4 @@ updates:
     schedule:
       interval: "daily"
       
-# Maintain dependencies for yarn @rine
 
-  - package-ecosystem: "yarn"
-    directory: "/rine"
-    schedule:
-      interval: "daily"
