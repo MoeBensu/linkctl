@@ -4,7 +4,7 @@
   "description": "mern stack url shortener",
   "main": "server.js",
   "scripts": {
-    "start": "npm server",
+    "start": "node server.js",
     "dev": "nodemon server"
   },
   "repository": {
