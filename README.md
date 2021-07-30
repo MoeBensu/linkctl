@@ -5,7 +5,7 @@
 ## A Brief Description
 Just another [url shortener](https://en.wikipedia.org/wiki/URL_shortening) service, using MERN stack.
 
-A minimal service in terms of styling, yet relies on clean and scalable code.
+HOWEVER, it's yours, it's your "ctly" url shortener service.
 
 ## Overview
 
