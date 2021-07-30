@@ -16,6 +16,4 @@ A minimal service in terms of styling, yet relies on clean and scalable code.
 |  mj | database | [MongoDB](https://www.mongodb.com/) docker image|
 
 ## Upcoming plans
-- Dockerization of back- and frontend
-- Replace MongoDB Atlas with a docker mongodb imgage 
-- hosting
+- **NEW**: povit to url shortener service that's: lightweight, easy to selfhost, beginners-friendly
