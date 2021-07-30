@@ -16,4 +16,4 @@ HOWEVER, it's yours, it's your "ctly" url shortener service.
 |  mj | database | [MongoDB](https://www.mongodb.com/) docker image|
 
 ## Upcoming plans
-- **NEW**: povit to url shortener service that's: lightweight, easy to selfhost, beginners-friendly and has modern stack
+- **NEW**: povit to url shortener service that's: lightweight, easy to (self-)host, beginners-friendly and has modern stack
