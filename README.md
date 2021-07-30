@@ -16,4 +16,4 @@ A minimal service in terms of styling, yet relies on clean and scalable code.
 |  mj | database | [MongoDB](https://www.mongodb.com/) docker image|
 
 ## Upcoming plans
-- **NEW**: povit to url shortener service that's: lightweight, easy to selfhost, beginners-friendly
+- **NEW**: povit to url shortener service that's: lightweight, easy to selfhost, beginners-friendly and has modern stack
