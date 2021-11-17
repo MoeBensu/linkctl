@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.1.4",
+    "mongodb": "^4.2.0",
     "mongoose": "^6.0.12",
     "shortid": "^2.2.16",
     "valid-url": "^1.0.9"
