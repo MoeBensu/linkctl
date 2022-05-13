@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MoetheNeuron/url_shortener#readme",
   "devDependencies": {
-    "prettier-config-standard": "^4.0.0"
+    "prettier-config-standard": "^5.0.0"
   },
   "prettier": "prettier-config-standard"
 }
